@@ -15,7 +15,7 @@
  clear
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -33,7 +33,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -50,7 +50,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -68,7 +68,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 fi
 
 BIBlack='\033[1;90m'      # Black
@@ -245,7 +245,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/Andyyuda/permission/main/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/kanghory/permission/main/versions)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
@@ -263,16 +263,16 @@ echo -e "${BIYellow}□ Clients Name        = ${GREEN}$Name${NC}"
 echo -e "${BIYellow}□ Expired Script VPS  = ${GREEN}$Exp${NC}"
 echo -e "${BIYellow}□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "${BIYellow}□ License Limit       = 3 VPS ${GREEN}( Persatu IP VPS )${NC}"
-echo -e "${BIYellow}□ AutoScript By Dev   = Wak ${GREEN}( AndyYuda )${NC}"
+echo -e "${BIYellow}□ AutoScript By Dev   = KLMPK ${GREEN}( KANG HORY VPN )${NC}"
 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UWhite}ANDYYUDA TUNELING${NC}"
+echo -e "${BICyan} │                  ${BIWhite}${UWhite}KANG HORY VPN TUNELING${NC}"
 echo -e "${BICyan} │"
 echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 
-echo -e "${GREEN}INGATLAH KAWAN DILANGIT MASIH ADA LANGIT JAGAN LUPA DIRI${NC}" 
+echo -e "${GREEN}PINGIN MULYO KUDU WANI REKOSO${NC}" 
 
 echo -e "${GREEN}┌──────────────────────────────────────────────────┐${NC}" 
 echo -e "${GREEN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN $NC" 
@@ -310,7 +310,7 @@ case $opt in
 8) clear ; addhost ;;
 9) clear ; running ;;
 10) clear ; jam ;;
-6969) clear ; wget https://raw.githubusercontent.com/Andyyuda/Ver3/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
+6969) clear ; wget https://raw.githubusercontent.com/kanghory/VPN-2/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
